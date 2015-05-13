@@ -23,11 +23,12 @@ public class WzorceProjektowe {
 
         System.out.println("Test");
         WzorceProjektowe testJava = new WzorceProjektowe();
-        testJava.testuj();
+//        testJava.testujIterator();
+        testJava.testujSingleton();
 
     }
 
-    public void testujAl() {
+    public void testujIteratorArrayList() {
         ArrayList<Integer> ar = new ArrayList<Integer>();
 
         ar.add(0);
@@ -48,7 +49,7 @@ public class WzorceProjektowe {
 
     }
 
-    public void testuj() {
+    public void testujIterator() {
         WzorzecIterator testIterator = new WzorzecIterator();
         Iterator iter1 = testIterator.iterator();
         Iterator iter2 = testIterator.iterator();
@@ -60,5 +61,18 @@ public class WzorceProjektowe {
         while (iter2.hasNext()) {
             System.out.println("iter2=" + iter2.next());
         }
+    }
+    
+    public void testujSingleton()
+    {
+        WzorzecSingleton ws1 = WzorzecSingleton.getInstance();
+        WzorzecSingleton ws2 = WzorzecSingleton.getInstance();
+        
+        System.out.println("ws1.dajLicznik():" + ws1.dajLicznik());
+        System.out.println("ws2.dajLicznik():" + ws2.dajLicznik());
+        ws1.ustawLicznik(12);
+        System.out.println("ws1.dajLicznik():" + ws1.dajLicznik());
+        System.out.println("ws2.dajLicznik():" + ws2.dajLicznik());
+        
     }
 }

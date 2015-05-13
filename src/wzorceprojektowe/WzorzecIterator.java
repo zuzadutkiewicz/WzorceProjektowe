@@ -18,9 +18,8 @@ public class WzorzecIterator {
     private final int tab[] = new int[lenTab];
 
     WzorzecIterator() {
-        for (int i = 0; i < lenTab; i++) {
+        for (int i = 0; i < lenTab; i++)
             tab[i] = i;
-        }
     }
 
     public Iterator iterator() {
